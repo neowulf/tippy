@@ -23,17 +23,37 @@ class ViewController: UIViewController {
         calculate()
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let intValue = defaults.integerForKey("defaultTipIdx") ?? 0
-
         tipControl.selectedSegmentIndex = intValue
         
         calculate()
+        print("view will appear")
     }
 
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
+    
     func calculate() {
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
