@@ -5,6 +5,8 @@ Instructions can be found [here](http://courses.codepath.com/snippets/intro_to_i
 1. Implmented both the TipViewController and the SettingsViewController.
 1. Including the follwing GIF walkthrough.
 
+<img src='https://github.com/neowulf33/tippy/raw/v1.0/tippy_demo.gif' title='img' width='200' alt='img' />
+
 ### Useful Links
 
 * [Pttrns](http://pttrns.com)
