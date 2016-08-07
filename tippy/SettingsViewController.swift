@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var defaultTipPicker: UIPickerView!
     
+    //TODO refactor this into a dictionary shared between this class and ViewController
     let tips = ["15%", "20%", "25%"]
 
     override func viewWillAppear(animated: Bool) {
